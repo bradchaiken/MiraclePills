@@ -17,6 +17,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var statePickerBtn: UIButton!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var countryInput: UITextField!
+    @IBOutlet weak var zipCodeLabel: UILabel!
+    @IBOutlet weak var zipCodeInput: UITextField!
+    @IBOutlet weak var buyNowButton: UIButton!
     
     let states = [
         "Alaska",
@@ -90,6 +95,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     // When the statePickerBtn is pressed, un hide the statePicker.
     @IBAction func stateBtnPressed(_ sender: Any) {
         statePicker.isHidden = false
+        hideInputs()
+    }
+    
+    @IBAction func buyNowBtnPressed(_ sender: Any) {
     }
     
     // We only have one component. Return 1.
@@ -113,6 +122,21 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         // Re hide statePicker.
         statePicker.isHidden = true
+        showInputs()
+    }
+    
+    func showInputs() {
+        countryLabel.isHidden = false
+        countryInput.isHidden = false
+        zipCodeLabel.isHidden = false
+        zipCodeInput.isHidden = false
+    }
+    
+    func hideInputs() {
+        countryLabel.isHidden = true
+        countryInput.isHidden = true
+        zipCodeLabel.isHidden = true
+        zipCodeInput.isHidden = true
     }
 
 }

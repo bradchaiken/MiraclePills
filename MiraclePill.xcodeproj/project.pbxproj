@@ -302,6 +302,7 @@
 				72C5476F1FBBC77300CF41E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
